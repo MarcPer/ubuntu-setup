@@ -1,0 +1,13 @@
+# git + meld
+sudo apt-get install git meld -y
+if [ ! -z "$username" ]; then
+  git config --global user.name $username
+fi
+if [ ! -z "$email" ]; then
+  git config --global user.email $email
+fi
+wget https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
+git config --global merge.tool meld
+git config --global color.ui true
+
+cat ./support/git-completion.bash > $HOME/.git-completion.bash

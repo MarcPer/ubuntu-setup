@@ -1,0 +1,24 @@
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+  
+  # Add git completion to aliases
+  __git_complete g __git_main
+  __git_complete gco _git_checkout
+  __git_complete gp _git_push
+fi
+
+# Docker
+alias dc="docker-compose"
+alias d="docker"
+
+# Git
+alias g="git"
+alias gl="git log --stat --color"
+alias gp="git push"
+alias gco="git checkout"
+
+# Ruby / Rails
+alias be="bundle exec"
+
+# Tsuru
+alias t="tsuru"

@@ -1,0 +1,11 @@
+# Meteor
+
+printf "Installing Meteor: "
+
+if [ -z `which meteor` ] ; then
+  curl https://install.meteor.com/ | sh
+  printf "done\n"
+else
+  printf "already installed\n"
+fi
+

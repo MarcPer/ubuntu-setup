@@ -1,0 +1,9 @@
+echo "Setting up bash"
+
+printf "\tAliases: "
+if [ ! -f $HOME/.bash_aliases ]; then
+  cat ./support/bash_aliases > $HOME/.bash_aliases
+  printf "OK\n"
+else
+  printf ".bash_aliases exists already and was not modified\n"
+fi
